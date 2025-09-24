@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crash Course: HTML, CSS, JS, and Java</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Programming Crash Course</h1>
+        <p>Your one-stop resource for learning fundamental programming languages.</p>
+    </header>
+
+    <nav>
+        <button onclick="showContent('html')">HTML</button>
+        <button onclick="showContent('css')">CSS</button>
+        <button onclick="showContent('javascript')">JavaScript</button>
+        <button onclick="showContent('java')">Java</button>
+    </nav>
+
+    <main>
+        <section id="html-content" class="course-section active">
+            <h2>HTML (HyperText Markup Language)</h2>
+            <div class="search-container">
+                <input type="text" id="html-search" onkeyup="filterContent('html')" placeholder="Search HTML syntax...">
+            </div>
+            <p>HTML is the standard markup language for documents designed to be displayed in a web browser. It provides the structure for a web page.</p>
+            <div id="html-syntax-list" class="syntax-list">
+                <div class="syntax-item">
+                    <h3>&lt;!DOCTYPE html&gt;</h3>
+                    <p><strong>Definition:</strong> Declares the document type and version of HTML. It must be the first thing in your HTML document.</p>
+                    <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>&lt;html&gt;...&lt;/html&gt;</h3>
+                    <p><strong>Definition:</strong> The root element of an HTML page. All other elements are nested inside this tag.</p>
+                    <pre><code>&lt;html lang="en"&gt;
+  ...
+&lt;/html&gt;</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>&lt;head&gt;...&lt;/head&gt;</h3>
+                    <p><strong>Definition:</strong> A container for metadata about the HTML document, such as the title, character set, and links to stylesheets.</p>
+                    <pre><code>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;My Webpage&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>&lt;body&gt;...&lt;/body&gt;</h3>
+                    <p><strong>Definition:</strong> Contains all the visible content of the webpage, such as text, images, links, forms, etc.</p>
+                    <pre><code>&lt;body&gt;
+  &lt;h1&gt;Hello, World!&lt;/h1&gt;
+  &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>&lt;h1&gt;-&lt;h6&gt;</h3>
+                    <p><strong>Definition:</strong> Headings tags used to define different levels of headings from most important (h1) to least important (h6).</p>
+                    <pre><code>&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h2&gt;Section Subtitle&lt;/h2&gt;</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>&lt;p&gt;</h3>
+                    <p><strong>Definition:</strong> A paragraph tag used to group sentences and display text as a block.</p>
+                    <pre><code>&lt;p&gt;This is a simple paragraph of text on a web page.&lt;/p&gt;</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>&lt;a&gt;</h3>
+                    <p><strong>Definition:</strong> The anchor tag creates a hyperlink to another page or a location within the same page. The `href` attribute specifies the destination URL.</p>
+                    <pre><code>&lt;a href="https://www.example.com"&gt;Visit Example.com&lt;/a&gt;</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>&lt;img&gt;</h3>
+                    <p><strong>Definition:</strong> The image tag is used to embed an image into a web page. The `src` attribute is required and specifies the path to the image file.</p>
+                    <pre><code>&lt;img src="images/logo.png" alt="Company Logo"&gt;</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</h3>
+                    <p><strong>Definition:</strong> `ul` creates an unordered (bulleted) list, `ol` creates an ordered (numbered) list, and `li` defines a list item within either.</p>
+                    <pre><code>&lt;ul&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Tea&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="css-content" class="course-section">
+            <h2>CSS (Cascading Style Sheets)</h2>
+            <div class="search-container">
+                <input type="text" id="css-search" onkeyup="filterContent('css')" placeholder="Search CSS properties...">
+            </div>
+            <p>CSS is a stylesheet language used to describe the presentation of a document written in HTML. It controls colors, fonts, layout, and other visual aspects.</p>
+            <div id="css-syntax-list" class="syntax-list">
+                <div class="syntax-item">
+                    <h3>color</h3>
+                    <p><strong>Definition:</strong> Sets the color of the text within an element.</p>
+                    <pre><code>p {
+  color: #333333; /* Hex code */
+}</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>background-color</h3>
+                    <p><strong>Definition:</strong> Sets the background color of an element.</p>
+                    <pre><code>body {
+  background-color: #f0f0f0;
+}</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>font-family</h3>
+                    <p><strong>Definition:</strong> Specifies the font for an element.</p>
+                    <pre><code>h1 {
+  font-family: Arial, sans-serif;
+}</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>font-size</h3>
+                    <p><strong>Definition:</strong> Specifies the size of the font.</p>
+                    <pre><code>p {
+  font-size: 16px;
+}</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>margin</h3>
+                    <p><strong>Definition:</strong> Sets the outer space around an element.</p>
+                    <pre><code>div {
+  margin: 10px 20px 30px 40px; /* top right bottom left */
+}</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>padding</h3>
+                    <p><strong>Definition:</strong> Sets the inner space between an element's content and its border.</p>
+                    <pre><code>.box {
+  padding: 15px;
+}</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>border</h3>
+                    <p><strong>Definition:</strong> Sets the border of an element.</p>
+                    <pre><code>img {
+  border: 1px solid black;
+}</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>display</h3>
+                    <p><strong>Definition:</strong> Specifies the display behavior of an element (e.g., `block`, `inline`, `flex`, `grid`).</p>
+                    <pre><code>.container {
+  display: flex;
+}</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>flexbox (flex-direction, justify-content, align-items)</h3>
+                    <p><strong>Definition:</strong> A one-dimensional layout method for arranging items in rows or columns.</p>
+                    <pre><code>.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="javascript-content" class="course-section">
+            <h2>JavaScript</h2>
+            <div class="search-container">
+                <input type="text" id="javascript-search" onkeyup="filterContent('javascript')" placeholder="Search JavaScript syntax...">
+            </div>
+            <p>JavaScript is a programming language that allows you to implement complex features on web pages, such as interactivity and dynamic content.</p>
+            <div id="javascript-syntax-list" class="syntax-list">
+                <div class="syntax-item">
+                    <h3>Variable Declaration (let, const, var)</h3>
+                    <p><strong>Definition:</strong> Used to declare a variable. `let` is for block-scoped variables, `const` for block-scoped constants, and `var` for function-scoped variables.</p>
+                    <pre><code>let name = "John";
+const age = 30;
+var city = "New York";</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>Data Types</h3>
+                    <p><strong>Definition:</strong> JavaScript has several data types, including `string`, `number`, `boolean`, `array`, and `object`.</p>
+                    <pre><code>let text = "Hello";
+let num = 100;
+let isTrue = true;
+let arr = [1, 2, 3];
+let obj = { key: "value" };</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>Functions</h3>
+                    <p><strong>Definition:</strong> A block of code designed to perform a particular task. A function is executed when "something" invokes it.</p>
+                    <pre><code>function greet(name) {
+  return "Hello, " + name + "!";
+}
+console.log(greet("Alice"));</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>If-Else Statements</h3>
+                    <p><strong>Definition:</strong> A control flow statement that executes a block of code if a specified condition is true.</p>
+                    <pre><code>let x = 10;
+if (x > 5) {
+  console.log("x is greater than 5");
+} else {
+  console.log("x is not greater than 5");
+}</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>Loops (for, while)</h3>
+                    <p><strong>Definition:</strong> Used to execute a block of code repeatedly.</p>
+                    <pre><code>// For loop
+for (let i = 0; i < 3; i++) {
+  console.log(i);
+}
+
+// While loop
+let j = 0;
+while (j < 3) {
+  console.log(j);
+  j++;
+}</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>Arrays</h3>
+                    <p><strong>Definition:</strong> A special type of object used to store multiple values in a single variable. Elements are accessed by an index.</p>
+                    <pre><code>let fruits = ["Apple", "Banana", "Orange"];
+console.log(fruits[1]); // Output: "Banana"
+fruits.push("Mango");</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="java-content" class="course-section">
+            <h2>Java</h2>
+            <div class="search-container">
+                <input type="text" id="java-search" onkeyup="filterContent('java')" placeholder="Search Java syntax...">
+            </div>
+            <p>Java is a high-level, object-oriented programming language. It is known for its "Write Once, Run Anywhere" principle, allowing compiled code to run on any platform that supports Java.</p>
+            <div id="java-syntax-list" class="syntax-list">
+                <div class="syntax-item">
+                    <h3>Class</h3>
+                    <p><strong>Definition:</strong> The fundamental building block of an object-oriented program. It is a blueprint for creating objects.</p>
+                    <pre><code>public class Car {
+  String color;
+  int year;
+}</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>`main` Method</h3>
+                    <p><strong>Definition:</strong> The entry point for any Java application. The JVM starts executing from this method.</p>
+                    <pre><code>public static void main(String[] args) {
+  System.out.println("Hello, World!");
+}</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>Data Types</h3>
+                    <p><strong>Definition:</strong> Specifies the size and type of values that can be stored in a variable. Examples include `int` for integers, `double` for decimals, and `String` for text.</p>
+                    <pre><code>int age = 25;
+double price = 99.99;
+boolean isStudent = true;
+String name = "Jane";</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>Variables</h3>
+                    <p><strong>Definition:</strong> A container for storing data values. In Java, variables must be declared with their data type.</p>
+                    <pre><code>int speed = 120;
+String greeting = "Welcome to Java!";</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>Methods</h3>
+                    <p><strong>Definition:</strong> A block of code that performs an action. Methods are defined within a class and are called on an object.</p>
+                    <pre><code>public class Calculator {
+  public int add(int a, int b) {
+    return a + b;
+  }
+}</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>Conditional Statements (if, else if, else)</h3>
+                    <p><strong>Definition:</strong> Used to execute different code blocks based on a condition.</p>
+                    <pre><code>int time = 20;
+if (time &lt; 18) {
+  System.out.println("Good day.");
+} else {
+  System.out.println("Good evening.");
+}</code></pre>
+                </div>
+                <div class="syntax-item">
+                    <h3>Loops (for, while)</h3>
+                    <p><strong>Definition:</strong> Used to execute a block of code repeatedly.</p>
+                    <pre><code>// For loop
+for (int i = 0; i &lt; 5; i++) {
+  System.out.println(i);
+}
+
+// While loop
+int i = 0;
+while (i &lt; 5) {
+  System.out.println(i);
+  i++;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

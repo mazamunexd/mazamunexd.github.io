@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fab fa-spotify"></i>
+                <span>Spotify Clone</span>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li class="active">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-search"></i>
+                        <span>Search</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-list"></i>
+                        <span>Your Library</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-plus"></i>
+                        <span>Create Playlist</span>
+                    </li>
+                    <li id="upload-btn">
+                        <i class="fas fa-upload"></i>
+                        <span>Upload Music</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="top-bar">
+                <div class="nav-buttons">
+                    <button class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for songs, artists, or albums" id="search-input">
+                </div>
+                <div class="user-profile">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+
+            <div class="content-area">
+                <div class="section">
+                    <h2>Recently Played</h2>
+                    <div class="music-grid" id="recently-played">
+                        <!-- Songs will be populated here -->
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>All Songs</h2>
+                    <div class="song-list" id="song-list">
+                        <!-- Song list will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Now Playing Bar -->
+        <div class="now-playing-bar">
+            <div class="now-playing-info">
+                <img src="https://via.placeholder.com/60x60?text=♪" alt="Album Art" id="current-album-art">
+                <div class="song-info">
+                    <div class="song-title" id="current-song-title">Select a song</div>
+                    <div class="artist-name" id="current-artist-name">Artist</div>
+                </div>
+                <button class="like-btn"><i class="far fa-heart"></i></button>
+            </div>
+
+            <div class="player-controls">
+                <div class="control-buttons">
+                    <button class="control-btn" id="shuffle-btn"><i class="fas fa-random"></i></button>
+                    <button class="control-btn" id="prev-btn"><i class="fas fa-step-backward"></i></button>
+                    <button class="control-btn play-pause-btn" id="play-pause-btn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button class="control-btn" id="next-btn"><i class="fas fa-step-forward"></i></button>
+                    <button class="control-btn" id="repeat-btn"><i class="fas fa-redo"></i></button>
+                </div>
+                
+                <div class="progress-bar-container">
+                    <span class="time-display" id="current-time">0:00</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                        <div class="progress-handle" id="progress-handle"></div>
+                    </div>
+                    <span class="time-display" id="total-time">0:00</span>
+                </div>
+            </div>
+
+            <div class="volume-controls">
+                <button class="control-btn" id="volume-btn"><i class="fas fa-volume-up"></i></button>
+                <div class="volume-bar">
+                    <div class="volume-fill" id="volume-fill"></div>
+                    <div class="volume-handle" id="volume-handle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upload Modal -->
+    <div class="modal-overlay" id="upload-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Upload Music</h3>
+                <button class="close-btn" id="close-modal">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="upload-form" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="song-title-input">Song Title</label>
+                        <input type="text" id="song-title-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="artist-input">Artist</label>
+                        <input type="text" id="artist-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="album-input">Album</label>
+                        <input type="text" id="album-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="music-file">Music File (MP3)</label>
+                        <input type="file" id="music-file" accept=".mp3" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="album-art">Album Art</label>
+                        <input type="file" id="album-art" accept="image/*">
+                    </div>
+                    <button type="submit" class="upload-btn-submit">Upload Song</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio-player" preload="metadata"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

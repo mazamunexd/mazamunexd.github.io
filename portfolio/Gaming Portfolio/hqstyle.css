@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Sanchez", serif;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#21d4fd, #b721ff);
+  border-radius: 100px;
+}
+
+/* NAV SECTION */
+
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 12;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    transition: top 0.3s;
+}
+
+.nav-hidden {
+    top: -100px;
+}
+
+.nav-links {
+    max-width: 1250px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    text-decoration: none; 
+}
+
+.logo-link h4 {
+    position: relative;
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1;
+    transition: all 0.3s ease;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(8, 24, 131, 1) 50%, rgba(0, 212, 255, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.logo-link:hover h4 {
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    opacity: 0.8;
+}
+
+.logo-link:hover h4::after {
+  opacity: 1;
+}
+
+.nav-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.nav-links ul li a {
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.nav-links ul li a:hover {
+    color: whitesmoke;
+}
+
+.nav-links ul li a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(8, 24, 131, 1) 50%, rgba(0, 212, 255, 1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.nav-links ul li a:hover::after {
+    opacity: 1;
+}
+
+/* HOME SECTION */
+
+#home {
+  padding-top: 100px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url("images/wallpaper.png");
+  background-repeat: repeat-x; 
+  background-position: 0 0; 
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: overlay;
+  overflow: hidden;
+
+  /* The animation property */
+  animation: slide-left 48s linear infinite;
+}
+
+@keyframes slide-left {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -200% 0; 
+  }
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-content h1 {  
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content h1 span {
+  color: whitesmoke;
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(8, 24, 131, 1) 50%, rgba(0, 212, 255, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.hero-content h1 span:hover {
+  color: transparent;
+}
+
+.hero-content .tagline {
+  font-size: 1.5rem;
+  color: whitesmoke;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: royalblue;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: whitesmoke;
+  color: royalblue;
+  cursor: pointer;
+}
+
+/* GAME SECTION */
+
+#game-section {
+    position: relative;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: #00D4FF;
+    background: linear-gradient(90deg, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(2, 0, 36, 1) 100%);
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.game-container {
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-container h2 {
+    font-size: 2.5rem;
+} 
+
+.game-container p {
+    font-size: 1.2rem;
+}
+
+.game-container h2, p {
+    color: whitesmoke;
+    padding: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel {
+    --items: 6;
+    --carousel-duration: 40s;
+    --carousel-width: min(
+      80vw,
+      1200px
+    );
+    --carousel-item-width: 280px;
+    --carousel-item-height: 450px;
+    --carousel-item-gap: 2rem;
+    --clr-cta: rgb(27, 15, 204);
+    
+    position: relative;
+    width: var(--carousel-width);
+    height: var(--carousel-item-height);
+    overflow: clip;
+}
+
+@media (width > 600px) {
+    .carousel {
+      --carousel-duration: 30s;
+    }
+}
+
+.carousel[mask] {
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10% 90%,
+        transparent
+    );
+}
+
+.carousel[reverse] > article {
+    animation-direction: reverse;
+}
+
+.carousel:hover > article {
+    animation-play-state: paused;
+}
+
+.carousel > article {
+    position: absolute;
+    top: 0;
+    left: calc(100% + var(--carousel-item-gap));
+    width: var(--carousel-item-width);
+    height: var(--carousel-item-height);
+    display: grid;
+    grid-template-rows: 200px auto 1fr auto;
+    gap: 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    padding-block-end: 1rem;
+    border-radius: 10px;
+    background: #82828f;
+    background: linear-gradient(90deg, rgba(130, 130, 143, 1) 0%, rgba(39, 39, 48, 1) 100%);
+    color: rgb(214, 220, 235);
+    will-change: transform;
+    animation-name: marquee;
+    animation-duration: var(--carousel-duration);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: calc(
+        var(--carousel-duration) / var(--items) * 1 * var(--i) * -1
+    );
+}
+
+.carousel > article:nth-child(1) { --i: 0; }
+.carousel > article:nth-child(2) { --i: 1; }
+.carousel > article:nth-child(3) { --i: 2; }
+.carousel > article:nth-child(4) { --i: 3; }
+.carousel > article:nth-child(5) { --i: 4; }
+.carousel > article:nth-child(6) { --i: 5; }
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.carousel > article > *:not(img) {
+    padding: 0 1rem;
+}
+
+.carousel > article > div {
+    grid-row: span 2;
+    display: grid;
+    grid-template-rows: subgrid;
+    font-size: 0.8rem;
+}
+
+.carousel > article h2 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding-block: 0.75rem 0.25rem;
+    margin: 0;
+}
+
+.carousel > article p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.carousel > article a {
+    text-decoration: none;
+    text-transform: lowercase;
+    background-color: whitesmoke;
+    border: 1px solid var(--clr-cta);
+    color: var(--clr-cta);
+    border-radius: 3px;
+    padding: 0.25rem 0.5rem;
+    place-self: start;
+    transition: 150ms ease-in-out;
+}
+
+.carousel > article a:hover,
+.carousel > article a:focus-visible {
+    background-color: var(--clr-cta);
+    color: whitesmoke;
+    outline: none;
+}
+
+@keyframes marquee {
+    100% {
+        transform: translateX(
+            calc(
+                (var(--items) * (var(--carousel-item-width) + var(--carousel-item-gap))) * -1
+            )
+        );
+    }
+}

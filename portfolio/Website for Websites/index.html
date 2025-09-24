@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebHub - Your Gateway to the Internet</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-globe"></i>
+                <h1>WebHub</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search websites..." class="search-input">
+                <button class="search-btn" onclick="searchWebsites()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="header-stats">
+                <span id="websiteCount">100+ Websites</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="category-nav">
+        <div class="container">
+            <div class="nav-scroll">
+                <button class="nav-btn active" onclick="showCategory('all')">All</button>
+                <button class="nav-btn" onclick="showCategory('social')">Social Media</button>
+                <button class="nav-btn" onclick="showCategory('tech')">Tech Giants</button>
+                <button class="nav-btn" onclick="showCategory('art')">Art & Design</button>
+                <button class="nav-btn" onclick="showCategory('entertainment')">Entertainment</button>
+                <button class="nav-btn" onclick="showCategory('education')">Education</button>
+                <button class="nav-btn" onclick="showCategory('shopping')">Shopping</button>
+                <button class="nav-btn" onclick="showCategory('news')">News</button>
+                <button class="nav-btn" onclick="showCategory('productivity')">Productivity</button>
+                <button class="nav-btn" onclick="showCategory('gaming')">Gaming</button>
+                <button class="nav-btn" onclick="showCategory('finance')">Finance</button>
+                <!-- <button class="nav-btn" onclick="showCategory('adult')">Adult (18+)</button> -->
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="websites-grid" id="websitesGrid">
+                <!-- Websites will be dynamically loaded here -->
+            </div>
+        </div>
+    </main>
+
+    <div class="age-verification-modal" id="ageModal">
+        <div class="modal-content">
+            <h2>Age Verification Required</h2>
+            <p>You must be 18 or older to access adult content.</p>
+            <div class="modal-buttons">
+                <button class="btn btn-primary" onclick="confirmAge()">I am 18+</button>
+                <button class="btn btn-secondary" onclick="closeAgeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 WebHub. Your gateway to the internet. All websites belong to their respective owners.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

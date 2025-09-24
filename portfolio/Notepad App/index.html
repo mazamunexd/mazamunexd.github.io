@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Book Notepad</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Minecraft:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background">
+        <div class="particles"></div>
+    </div>
+    
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-book-open"></i> Notepad</h1>
+            <div class="controls">
+                <button class="btn btn-add" onclick="addPage()">
+                    <i class="fas fa-plus"></i> Add Page
+                </button>
+                <button class="btn btn-remove" onclick="removePage()">
+                    <i class="fas fa-minus"></i> Remove Page
+                </button>
+                <button class="btn btn-save" onclick="saveAllNotes()">
+                    <i class="fas fa-save"></i> Save All
+                </button>
+                <button class="btn btn-load" onclick="loadNotes()">
+                    <i class="fas fa-folder-open"></i> Load
+                </button>
+            </div>
+        </header>
+
+        <div class="book-container">
+            <div class="book" id="book">
+                <!-- Pages will be dynamically added here -->
+            </div>
+        </div>
+
+        <div class="page-navigation">
+            <button class="nav-btn" onclick="previousPage()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <span class="page-counter" id="pageCounter">Page 1 of 1</span>
+            <button class="nav-btn" onclick="nextPage()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

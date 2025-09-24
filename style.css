@@ -168,7 +168,8 @@ section {
   left: 0;
   top: 0;
   z-index: -1;
-  clip-path: polygon(0 0, 65% 100%, 4% 0, 32% 0, 83% 100%, 0 100%, 19% 0, 0 100%, 0% 35%, 0 0);
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0 0);
+
 }
 .header-content .left-header .image {
   border-radius: var(--br-sm-2);
@@ -395,19 +396,23 @@ section {
 .portfolios {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
-  margin-top: 3rem;
+  gap: 1rem;
+  margin: 3rem center; /* Centers the grid container */
+  max-width: 1200px; /* A good max-width for a 3-column grid */
 }
 .portfolios .portfolio-item {
   position: relative;
   border-radius: 15px;
+  display: flex;
+  justify-content: center; 
 }
 .portfolios .portfolio-item img {
-  width: 100%;
-  height: 300px;
+  width: 345px;
+  height: 200px; /* Adjust the height to your preference */
   object-fit: cover;
   border-radius: 15px;
 }
+
 .portfolios .portfolio-item .hover-items {
   width: 100%;
   height: 100%;
@@ -425,7 +430,7 @@ section {
   transition: all 0.4s ease-in-out;
 }
 .portfolios .portfolio-item .hover-items h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--color-white);
   margin-bottom: 1.5rem;
   padding: .5rem .5rem;
@@ -435,6 +440,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 15px;
 }
 .portfolios .portfolio-item .hover-items .icons .icon {
   background-color: var(--color-primary);

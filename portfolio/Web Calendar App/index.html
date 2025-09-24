@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Calendar App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="calendar-wrapper">
+            <div class="calendar-container">
+                <!-- Header Section -->
+                <div class="header">
+                    <div class="header-content">
+                        <button id="prevBtn" class="nav-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="month-year">
+                            <div class="month-display">
+                                <span id="month" class="month-text"></span>
+                                <span id="year" class="year-text"></span>
+                            </div>
+                            <div class="today-info">
+                                <span id="todayDate"></span>
+                            </div>
+                        </div>
+                        <button id="nextBtn" class="nav-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Calendar Grid -->
+                <div class="calendar-grid">
+                    <div class="weekdays">
+                        <span class="weekday">Sun</span>
+                        <span class="weekday">Mon</span>
+                        <span class="weekday">Tue</span>
+                        <span class="weekday">Wed</span>
+                        <span class="weekday">Thu</span>
+                        <span class="weekday">Fri</span>
+                        <span class="weekday">Sat</span>
+                    </div>
+                    <div class="days" id="daysContainer"></div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <button class="action-btn" id="todayBtn">
+                        <i class="fas fa-calendar-day"></i>
+                        Today
+                    </button>
+                    <button class="action-btn" id="eventsBtn">
+                        <i class="fas fa-star"></i>
+                        Events
+                    </button>
+                </div>
+            </div>
+
+            <!-- Side Panel for Events -->
+            <div class="side-panel" id="sidePanel">
+                <div class="panel-header">
+                    <h3>Upcoming Events</h3>
+                    <button class="close-panel" id="closePanel">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="events-list" id="eventsList">
+                    <!-- Events will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

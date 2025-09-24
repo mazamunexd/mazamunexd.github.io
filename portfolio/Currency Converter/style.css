@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #000715;
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.container {
+    background: linear-gradient(135deg, #e3f0ff 0%, #b3caff 100%);
+    box-shadow: 0 8px 32px 0 rgba(30, 60, 114, 0.12);
+    padding: 2.5rem 2rem;
+    border-radius: 1.25rem;
+    min-height: 55vh;
+    width: 50vh;
+    max-width: 420px;
+    margin: 2rem;
+    transition: box-shadow 0.3s;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+form {
+    margin: 2rem 0 1rem 0;
+}
+
+form select,
+button,
+input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0.75rem;
+}
+
+form input {
+    border: 1px solid rgb(116, 116, 116);
+    font-size: 1rem;
+    height: 3rem;
+    padding-left: 0.5rem;
+    background-color: #e8e4ff;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+.dropdown i {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.select-container img {
+    max-width: 1.9rem;
+}
+
+.select-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(116, 116, 116);
+    width: 6rem; 
+} 
+
+.select-container select {
+    font-size: 0.9rem;
+    width: auto; 
+    cursor: pointer;
+    background-color: #e8e4ff;
+}
+
+.msg {
+    margin: 2rem 0;
+}
+
+form button {
+    height: 3rem;
+    background: linear-gradient(90deg, #2a5298 0%, #1e3c72 100%);
+    color: #e8e4ff;
+    font-size: 1.15rem;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowchart Diagram Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Flowchart Maker</h1>
+            <div class="header-controls">
+                <button id="saveBtn" class="btn btn-primary">Save</button>
+                <button id="loadBtn" class="btn btn-secondary">Load</button>
+                <input type="file" id="fileInput" accept=".json" style="display: none;">
+                <button id="clearBtn" class="btn btn-danger">Clear All</button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Toolbox -->
+            <aside class="toolbox">
+                <h3>Shapes</h3>
+                <div class="shape-tools">
+                    <div class="tool-item" data-shape="rectangle">
+                        <div class="shape-preview rectangle"></div>
+                        <span>Rectangle</span>
+                    </div>
+                    <div class="tool-item" data-shape="circle">
+                        <div class="shape-preview circle"></div>
+                        <span>Circle</span>
+                    </div>
+                    <div class="tool-item" data-shape="diamond">
+                        <div class="shape-preview diamond"></div>
+                        <span>Diamond</span>
+                    </div>
+                    <div class="tool-item" data-shape="ellipse">
+                        <div class="shape-preview ellipse"></div>
+                        <span>Ellipse</span>
+                    </div>
+                </div>
+
+                <h3>Tools</h3>
+                <div class="drawing-tools">
+                    <button id="selectTool" class="tool-btn active">Select</button>
+                    <button id="lineTool" class="tool-btn">Line</button>
+                    <button id="arrowTool" class="tool-btn">Arrow</button>
+                </div>
+
+                <h3>Properties</h3>
+                <div class="properties-panel">
+                    <div class="property-group">
+                        <label>Fill Color:</label>
+                        <input type="color" id="fillColor" value="#ffffff">
+                    </div>
+                    <div class="property-group">
+                        <label>Border Color:</label>
+                        <input type="color" id="borderColor" value="#000000">
+                    </div>
+                    <div class="property-group">
+                        <label>Border Width:</label>
+                        <input type="range" id="borderWidth" min="1" max="10" value="2">
+                        <span id="borderWidthValue">2</span>px
+                    </div>
+                    <div class="property-group">
+                        <label>Text:</label>
+                        <input type="text" id="shapeText" placeholder="Enter text">
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Canvas Area -->
+            <main class="canvas-container">
+                <svg id="canvas" width="100%" height="100%">
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+                                refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#000" />
+                        </marker>
+                    </defs>
+                </svg>
+            </main>
+        </div>
+    </div>
+
+    <!-- Context Menu -->
+    <div id="contextMenu" class="context-menu">
+        <div class="menu-item" id="deleteItem">Delete</div>
+        <div class="menu-item" id="duplicateItem">Duplicate</div>
+        <div class="menu-item" id="bringToFront">Bring to Front</div>
+        <div class="menu-item" id="sendToBack">Send to Back</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

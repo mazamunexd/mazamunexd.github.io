@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Year Countdown - Round Clock</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="particles"></div>
+    <div class="container">
+      <h1 class="title">Countdown to New Year</h1>
+      <div class="year">2026</div>
+      <div class="countdown">
+        <div class="circle-container">
+          <div class="circle" data-label="Days">
+            <svg class="progress-ring" width="120" height="120">
+              <circle class="progress-ring-circle" cx="60" cy="60" r="50" id="days-circle"></circle>
+            </svg>
+            <div class="number" id="day">00</div>
+            <div class="label">Days</div>
+          </div>
+        </div>
+        <div class="circle-container">
+          <div class="circle" data-label="Hours">
+            <svg class="progress-ring" width="120" height="120">
+              <circle class="progress-ring-circle" cx="60" cy="60" r="50" id="hours-circle"></circle>
+            </svg>
+            <div class="number" id="hour">00</div>
+            <div class="label">Hours</div>
+          </div>
+        </div>
+        <div class="circle-container">
+          <div class="circle" data-label="Minutes">
+            <svg class="progress-ring" width="120" height="120">
+              <circle class="progress-ring-circle" cx="60" cy="60" r="50" id="minutes-circle"></circle>
+            </svg>
+            <div class="number" id="minute">00</div>
+            <div class="label">Minutes</div>
+          </div>
+        </div>
+        <div class="circle-container">
+          <div class="circle" data-label="Seconds">
+            <svg class="progress-ring" width="120" height="120">
+              <circle class="progress-ring-circle" cx="60" cy="60" r="50" id="seconds-circle"></circle>
+            </svg>
+            <div class="number" id="second">00</div>
+            <div class="label">Seconds</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

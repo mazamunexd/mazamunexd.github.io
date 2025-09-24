@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png">
+    <title>Polytechnic University of the Philippines</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Home -->
+
+    <section class="sub-header">
+        <nav>
+            <a href="home.html" class="logo-container">
+                <img src="images/logo.png" alt="Logo">
+                <p>Polytechnic University of the Philippines</p>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Our Courses</h1>
+    </section>    
+
+    <!-- Courses content -->
+
+    <section class="course">
+        <h1>Academic Programs</h1>
+        <p>The university offers a diverse range of academic programs and courses across its various colleges.</p> 
+
+        <!-- undergrad -->
+
+        <div class="row">
+            <div class="course-col">
+                <div class="undergraduate-programs">
+                    <h2 id="undergrad">Undergraduate Programs</h2>
+                    <div class="colleges-grid">
+                        <div class="college">
+                            <h4 id="caf">College of Accountancy and Finance (CAF)</h4>
+                            <ul>
+                                <li>Bachelor of Science in Accountancy (BSA)</li>
+                                <li>Bachelor of Science in Business Administration Major in Financial Management (BSBAFM)</li>
+                                <li>Bachelor of Science in Management Accounting (BSMA)</li>
+                            </ul>
+                        </div>
+                        <div class="college">
+                            <h4 id="cadbe">College of Architecture, Design and the Built Environment (CADBE)</h4>
+                            <ul>
+                                <li>Bachelor of Science in Architecture (BS-ARCH)</li>
+                                <li>Bachelor of Science in Interior Design (BSID)</li>
+                                <li>Bachelor of Science in Environmental Planning (BSEP)</li>
+                            </ul>
+                        </div>
+                        <div class="college">
+                            <h4 id="cal">College of Arts and Letters (CAL)</h4>
+                            <ul>
+                                <li>Bachelor of Arts in English Language Studies (formerly Bachelor of Arts in English) (ABELS)</li>
+                                <li>Bachelor of Arts in Filipinology (ABF)</li>
+                                <li>Bachelor of Arts in Literary and Cultural Studies (ABLCS)</li>
+                                <li>Bachelor of Arts in Philosophy (AB-PHILO)</li>
+                                <li>Bachelor of Performing Arts major in Theater Arts (formerly BA Theater Arts) (BPEA)</li>
+                            </ul>
+                        </div>
+                        <div class="college">
+                            <h4 id="cba">College of Business Administration (CBA)</h4>
+                            <ul>
+                                <li>Bachelor of Science in Business Administration major in Marketing Management (BSBA-MM)</li>
+                                <li>Bachelor of Science in Business Administration major in Human Resource Development Management (BSBA-HRDM)</li>
+                                <li>Bachelor of Science in Entrepreneurship (BSEntrep)</li>
+                                <li>Bachelor of Science in Office Administration (BSOA)</li>
+                            </ul>
+                        </div>
+                        <div class="college">
+                            <h4 id="coc">College of Communication (COC)</h4>
+                            <ul>
+                                <li>Bachelor in Advertising and Public Relation (BAPR)</li>
+                                <li>Bachelor of Arts in Journalism (ABJ)</li>
+                                <li>Bachelor of Arts on Broadcasting (BA Broadcasting)</li>
+                                <li>Bachelor of Arts in Communication Research (ABCR)</li>
+                            </ul>
+                        </div>
+                        <div class="college">
+                            <h4 id="ccis">College of Computer and Information Sciences (CCIS)</h4>
+                            <ul>
+                                <li>Bachelor of Science in Computer Science (BSCS)</li>
+                                <li>Bachelor of Science in Information Technology (BSIT)</li>
+                            </ul>
+                        </div>
+                        <div class="college">
+                            <h4 id="coed">College of Education (COED)</h4>
+                            <ul>
+                                <li>Bachelor of Technology and Livelihood Education (BTLEd) major in Home Economics, Industrial Arts, Information and Communication Technology</li>
+                                <li>Bachelor of Library and Information Science (BLIS)</li>
+                                <li>Bachelor of Secondary Education (BSEd) major in English, Mathematics, Science, Filipino, Social Studies</li>
+                                <li>Bachelor of Elementary Education (BEEd)</li>
+                                <li>Bachelor of Early Childhood Education (BECEd)</li>
+                            </ul>
+                        </div>
+                        <div class="college">
+                            <h4 id="ce">College of Engineering (CE)</h4>
+                            <ul>
+                                <li>Bachelor of Science in Civil Engineering (BSCE)</li>
+                                <li>Bachelor of Science in Computer Engineering (BSCpE)</li>
+                                <li>Bachelor of Science in Electrical Engineering (BSEE)</li>
+                                <li>Bachelor of Science in Electronics Engineering (BSECE)</li>
+                                <li>Bachelor of Science in Industrial Engineering (BSIE)</li>
+                                <li>Bachelor of Science in Mechanical Engineering (BSME)</li>
+                                <li>Bachelor of Science in Railway Engineering (formerly Bachelor of Science in Railway Engineering and Management) (BSRE)</li>
+                            </ul>
+                        </div>
+                        <div class="college">
+                            <h4 id="chk">College of Human Kinetics (CHK)</h4>
+                            <ul>
+                                <li>Bachelor in Physical Education (BPE)</li>
+                            </ul>
+                        </div>
+                        <div class="college">
+                            <h4 id="cpspa">College of Political Science and Public Administration (CPSPA)</h4>
+                            <ul>
+                                <li>Bachelor of Arts in Political Science (BAPS)</li>
+                                <li>Bachelor of Arts in Political Economy (BAPE)</li>
+                                <li>Bachelor of Arts in International Studies (BAIS)</li>
+                                <li>Bachelor of Public Administration (BPA)</li>
+                            </ul>
+                        </div>
+                        <div class="college">
+                            <h4 id="cssd">College of Social Sciences and Development (CSSD)</h4>
+                            <ul>
+                                <li>Bachelor in Cooperatives (BC)</li>
+                                <li>Bachelor of Arts in History (ABH)</li>
+                                <li>Bachelor of Science in Economics (BSE)</li>
+                                <li>Bachelor of Science in Psychology (BSPSY)</li>
+                                <li>Bachelor of Science in Sociology (BSS)</li>
+                            </ul>
+                        </div>
+                        <div class="college">
+                            <h4 id="cs">College of Science (CS)</h4>
+                            <ul>
+                                <li>Bachelor in Applied Statistics (BAS)</li>
+                                <li>Bachelor of Science in Applied Mathematics (BSAM) major in Actuarial Mathematics</li>
+                                <li>Bachelor of Science in Biology (BSBIO)</li>
+                                <li>Bachelor of Science in Chemistry (BSCHEM)</li>
+                                <li>Bachelor of Science in Food Technology (BSFT)</li>
+                                <li>Bachelor of Science in Mathematics (BSM)</li>
+                                <li>Bachelor of Science in Nutrition and Dietetics (BSND)</li>
+                                <li>Bachelor of Science in Physics (BSP)</li>
+                            </ul>
+                        </div>
+                        <div class="college">
+                            <h4 id="cthtm">College of Tourism, Hospitality and Transportation Management (CTHTM)</h4>
+                            <ul>
+                                <li>Bachelor in Applied Statistics (BAS)</li>
+                                <li>Bachelor of Science in Tourism Management (BSTM)</li>
+                                <li>Bachelor in Transportation Management (BTM)</li>
+                                <li>Bachelor of Science in Hospitality Management (BSHM)</li>
+                            </ul>
+                        </div>
+                        <div class="college">
+                            <h4 id="ous">Open University System (OUS)</h4>
+                            <ul>
+                                <li>Bachelor of Science in Entrepreneurship (BSENTREP)</li>
+                                <li>Bachelor of Arts in Broadcasting (BABR)</li>
+                                <li>Bachelor of Science in Business Administration major in Human Resource Management (BSBAHRM)</li>
+                                <li>Bachelor of Science in Business Administration major in Marketing Management (BSBAMM)</li>
+                                <li>Bachelor of Science in Office Administration (BSOA)</li>
+                                <li>Bachelor of Science in Tourism Management (BSTM)</li>
+                                <li>Bachelor of Public Administration (BPA)</li>
+                            </ul>
+                        </div>
+                        <div class="college">
+                            <h4 id="itech">Institute of Technology (ITECH)</h4>
+                            <ul>
+                                <li>Diploma in Computer Engineering Technology</li>
+                                <li>Diploma in Electronics Communications Engineering Technology</li>
+                                <li>Diploma in Electrical Engineering Technology</li>
+                                <li>Diploma in Information Communication Technology</li>
+                                <li>Diploma in Mechanical Engineering Technology</li>
+                                <li>Diploma in Office Management Technology</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+
+            <!-- graduate -->
+
+            <div class="row">
+                <div class="course-col">
+                    <div class="graduate-programs">
+                        <h2 id="grad">Graduate Studies</h2>
+                        <div class="grad-grid">
+                            <div class="college">
+                                <h4>Graduate School</h4>
+                                <h5 id="doctorate">Doctorate Degree Programs</h5>
+                                <ul>
+                                    <li>Doctor of Philosophy in Communication (PhD Com)</li>
+                                    <li>Doctor of Philosophy in Economics (PhD Econ)</li>
+                                    <li>Doctor of Philosophy in English Language Studies (PhD ELS)</li>
+                                    <li>Doctor of Philosophy in Filipino (PhD Fil) Major in Wika, Panitikan</li>
+                                    <li>Doctor of Philosophy in Psychology (PhD Psy)</li>
+                                </ul>
+                                <h5 id="masters">Master's Degree Programs</h5>       
+                                    <li>Master in Applied Statistics (MAS) Specializations in Data Analytics, Official Statistics, Statistical Methods</li>
+                                    <li>Master of Arts in Communication (MAC)</li>
+                                    <li>Master of Arts in English Language Studies (MAELS)</li>
+                                    <li>Master of Arts in Filipino (MAF) Major in Wika, Panitikan</li>
+                                    <li>Master of Arts in Philippine Studies (MAPhilS)</li>
+                                    <li>Master of Arts in Philosophy (MAPhilo)</li>
+                                    <li>Master of Arts in Psychology (MAP) Major in Clinical Psychology, Industrial Psychology</li>
+                                    <li>Master of Arts in Sociology (MASocio)</li>
+                                    <li>Master of Science in Biology (MSBio)</li>
+                                    <li>Master of Arts in Sociology (MASocio)</li>
+                                    <li>Master of Science in Civil Engineering (MSCE) Specializations in Structural Engineering, Transport Engineering, Geotechnical Engineering, Water Resources Engineering
+                                    </li>
+                                    <li>Master of Science in Computer Engineering (MSCpE) Specializations in Applied Security and Digital Forensics, Data Science and Engineering</li>
+                                    <li>Master of Science in Economics (MSEcon)</li>
+                                    <li>Master of Science in Electronics Engineering (MSEcE) Specializations in Artificial Intelligence and Automation, Telecommunications</li>
+                                    <li>Master of Science in Industrial Engineering (MSIE)</li>
+                                    <li>Master of Science in Information Technology (MSIT) Specializations in Data Analytics, Information Security</li>
+                                    <li>Master of Science in International Tourism and Hospitality Management (MSITHM) Specializations in Hotel Operations, Travel and Tourism Operations</li>
+                                    <li>Master of Science in Mathematics (MSMath)</li>
+                                    <li>Master of Science in Mechanical Engineering (MSME)</li>
+                                    <li>Master of Science in Nutrition and Dietetics (MSND)</li>
+                                    <li>Professional Science Masters in Railway Engineering Management (PSMREM)</li>
+                                </ul>
+                                <h5 id="gdp">Graduate Diploma Program</h5>
+                                <ul>
+                                    <li>Graduate Diploma in Project Management (GDipPM)</li>
+                                </ul>
+                            </div>
+                            <div class="college">
+                                <h4>Open University System</h4>
+                                    <ul>
+                                        <li>Doctor in Business Administration (DBA)</li>
+                                        <li>Doctor in Engineering Management (D.Eng)</li>
+                                        <li>Doctor of Philsophy in Education Management (PhDEM)</li>
+                                        <li>Doctor in Public Administration (DPA)</li>
+                                        <li>Master in Communication (MC)</li>
+                                        <li>Master in Business Administration (MBA)</li>
+                                        <li>Master of Arts in Education Management  (MAEM)</li>
+                                        <li>Master in Information Technology (MIT)</li>
+                                        <li>Master in Public Administration (MPA)</li>
+                                        <li>Master of Science in Construction Management (MSCM)</li>
+                                        <li>Post Baccalaureate Diploma in Information Technology (PBDIT)</li>
+                                    </ul>
+                                <h4>College of Business Administration (CBA)</h4>
+                                <ul>
+                                    <li>Doctor in Business Administration (DBA)</li>
+                                    <li>Master in Business Administration (MBA)</li>
+                                </ul>
+                                <h4>College of Education (COED)</h4>
+                                    <ul>
+                                        <li>Doctor of Philsophy in Education Management (PhDEM)</li>
+                                        <li>Master of Arts in Education Management (MAEM) with Specialization in Educational Leadership, Instructional Leadership</li>
+                                        <li>Master in Business Education (MBE)</li>
+                                        <li>Master in Library and Information Science (MLIS)</li>
+                                        <li>Master of Arts in English Language Teaching (MAELT)</li>
+                                        <li>Master of Arts in Education major in Mathematics Education (MAEd-ME)</li>
+                                        <li>Master of Arts in Physical Education and Sports (MAPES)</li>
+                                        <li>Master of Arts in Education major in Teaching in the Challenged Areas (MAED-TCA)</li>
+                                        <li>Post-Baccalaureate Diploma in Education (PBDE)</li>
+                                    </ul>
+                                <h4>College of Political Science and Public Administration (CPSPA)</h4>
+                                    <ul>
+                                        <li>Doctor in Public Administration (DPA)</li>
+                                        <li>Master in Public Administration (MPA)</li>
+                                    </ul>
+                                <h4>College of Law (CL)</h4>
+                                    <ul>
+                                        <li>Juris Doctor (JD)</li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            
+            <!-- high school -->
+
+            <div class="row">
+                <div class="course-col">
+                    <div class="hs-programs">
+                        <h2 id="shs">High School</h2>
+                        <div class="shs-grid">
+                            <div class="college">
+                                <h3 id="pupshs">Senior High School</h3>
+                                <h4>PUPSHS Tracks and Strands</h4>
+                                <ul>
+                                    <li>ABM (Accountancy, Business and Management) Strand</li>
+                                    <li>STEM (Science, Technology, Engineering and Mathematics) Strand</li>   
+                                </ul>
+                            </div>
+                            <div class="college">
+                                <h3 id="puplh">Laboratory  High School</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    
+    <!-- facilities -->
+
+    <section class="facilities">
+        <h1>Our Facilities</h1>
+        <div class="row">
+            <div class="facilities-col">
+                <img src="images/pool.png" alt="">
+                <h3>Swimming Pool</h3>
+            </div>
+            <div class="facilities-col">
+                <img src="images/gymnasium.png" alt="">
+                <h3>Gymnasium</h3>
+            </div>
+            <div class="facilities-col">
+                <img src="images/bulwagan.png" alt="">
+                <h3>Balagtas Hall</h3>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer -->
+
+    <section class="footer" id="footer">
+        <h4>About Us</h4>
+        <p>Connect with us through our official PUP social media channels to stay updated, ask questions, and engage with our community. <br> Follow PUP social media for the latest news, events, and announcements!"</p>
+        <div class="icons">
+            <a href="https://www.facebook.com/ThePUPOfficial/" target="_blank">
+                <i class="fa-brands fa-facebook">
+                </i>
+            </a>
+            <a href="https://x.com/thepupofficial" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/thepupofficial" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@pupcreatv" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </div>
+        <p>Made with <i class="fa-regular fa-heart"></i> by Masamune</p>
+    </section>
+
+    <!-- JS Toggle Menu -->
+    <script src="script.js"></script>
+</body>
+</html>

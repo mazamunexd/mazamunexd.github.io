@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Rotation Login / Signup Box</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
+</head>
+<body>
+    <!-- Animated Background Elements -->
+    <div class="background-animation" id="backgroundAnimation"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="logo">Free<span>lancer</span></div>
+                <input type="checkbox" name="" id="click">
+                <label for="click" class="menu-btn">
+                    <i class="material-icons">menu</i>
+                </label>
+                <ul>
+                    <li><a href="#" class="active" data-section="home">Home</a></li>
+                    <li><a href="#" data-section="about">About</a></li>
+                    <li><a href="#" data-section="services">Services</a></li>
+                    <li><a href="#" data-section="gallery">Gallery</a></li>
+                    <li><a href="#" data-section="feedback">Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="content-section active">
+        <div class="container">
+            <div class="row full-screen align-items-center">
+                <div class="left">
+                    <span class="line"></span>
+                    <h2>Hello, It's Masamune, <br> a <span>digital designer</span></h2>
+                    <p>Web Design Tutorial using HTML & CSS with advanced animations and interactive elements</p>
+                    <a href="#" class="btn">Contact</a>
+
+                    <div class="social-media">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="form">
+                        <div class="text-center">
+                            <h6><span>Log In</span> <span>Sign Up</span></h6>
+                            <input type="checkbox" class="checkbox" id="reg-log">
+                            <label for="reg-log"></label>
+                            <div class="card-3d-wrap">
+                                <div class="card-3d-wrapper">
+                                    <div class="card-front">
+                                        <div class="center-wrap">
+                                            <h4 class="heading">Log In</h4>
+                                            <div class="form-group">
+                                                <input type="email" class="form-style" placeholder="Your Email" autocomplete="off">
+                                                <i class="input-icon material-icons">alternate_email</i>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="password" class="form-style" placeholder="Your Password" autocomplete="off">
+                                                <i class="input-icon material-icons">lock</i>
+                                            </div>
+
+                                            <a href="#" class="btn">Submit</a>
+                                            <p class="text-center"><a href="#" class="link">Forgot your password?</a></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-back">
+                                        <div class="center-wrap">
+                                            <h4 class="heading">Sign Up</h4>
+                                            <div class="form-group">
+                                                <input type="text" class="form-style" placeholder="Your Name" autocomplete="off">
+                                                <i class="input-icon material-icons">perm_identity</i>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="email" class="form-style" placeholder="Your Email" autocomplete="off">
+                                                <i class="input-icon material-icons">alternate_email</i>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="password" class="form-style" placeholder="Your Password" autocomplete="off">
+                                                <i class="input-icon material-icons">lock</i>
+                                            </div>
+
+                                            <a href="#" class="btn">Submit</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content-section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hello! Masamune desu!, a passionate digital designer with over 8 years of experience in creating stunning visual experiences. My journey in design began with a simple love for art and has evolved into a career dedicated to crafting beautiful, functional digital solutions.</p>
+            <p>I specialize in UI/UX design, web development, and brand identity creation. My approach combines technical expertise with creative vision to deliver designs that not only look great but also drive results and engage users.</p>
+            <p>When I'm not designing, you can find me exploring new design trends, contributing to open-source projects, or mentoring aspiring designers. I believe in continuous learning and pushing the boundaries of what's possible in digital design.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="content-section">
+        <div class="container">
+            <h2>My Services</h2>
+            <p>I offer a wide range of digital design services tailored to meet your specific needs and help your business stand out in the digital landscape.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fa-brands fa-figma"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive and engaging user interfaces with a focus on user experience and accessibility.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Building responsive and modern websites using the latest web technologies and frameworks.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h3>App Design</h3>
+                    <p>Designing beautiful and functional mobile applications for iOS and Android platforms.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fa-solid fa-paintbrush"></i>
+                    <h3>Brand Identity</h3>
+                    <p>Creating cohesive brand identities that communicate your values and resonate with your audience.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Digital Marketing</h3>
+                    <p>Strategic digital marketing solutions to increase your online presence and drive conversions.</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fa-solid fa-headset"></i>
+                    <h3>Consulting</h3>
+                    <p>Expert consulting services to help you navigate the digital landscape and make informed decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="content-section">
+        <div class="container">
+            <h2>My Work</h2>
+            <p>Explore some of my recent projects and design work. Each piece represents a unique challenge and solution.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://placehold.co/300x200/1a1a1a/crimson?text=Project+1" alt="Project 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/300x200/1a1a1a/crimson?text=Project+2" alt="Project 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/300x200/1a1a1a/crimson?text=Project+3" alt="Project 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/300x200/1a1a1a/crimson?text=Project+4" alt="Project 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/300x200/1a1a1a/crimson?text=Project+5" alt="Project 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/300x200/1a1a1a/crimson?text=Project+6" alt="Project 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback" class="content-section">
+        <div class="container">
+            <h2>Send Feedback</h2>
+            <p>I'd love to hear from you! Whether you have a project in mind, want to collaborate, or just want to say hello, feel free to reach out.</p>
+            
+            <div class="feedback-form">
+                <div class="form-group">
+                    <input type="text" class="form-style" placeholder="Your Name" autocomplete="off">
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" class="form-style" placeholder="Your Email" autocomplete="off">
+                </div>
+                
+                <div class="form-group">
+                    <textarea placeholder="Your Message"></textarea>
+                </div>
+                
+                <a href="#" class="btn">Send Message</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffees and Pastries</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-coffee"></i>
+                    <h1>Coffees & Pastries</h1>
+                </div>
+                <div class="search-cart">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Search products...">
+                    </div>
+                    <div class="cart-icon" id="cartIcon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Filter -->
+    <div class="container">
+        <div class="category-filter">
+            <h2>Our Menu</h2>
+            <div class="categories">
+                <button class="category-btn active" data-category="all">
+                    <i class="fas fa-filter"></i> All Items
+                </button>
+                <button class="category-btn" data-category="coffee">
+                    <i class="fas fa-mug-hot"></i> Coffee
+                </button>
+                <button class="category-btn" data-category="milktea">
+                    <i class="fas fa-glass-whiskey"></i> Milk Tea
+                </button>
+                <button class="category-btn" data-category="milkshake">
+                    <i class="fas fa-wine-bottle"></i> Milkshake
+                </button>
+                <button class="category-btn" data-category="bread">
+                    <i class="fas fa-bread-slice"></i> Bread
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="container">
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be dynamically inserted here -->
+             <!-- Coffee Example -->
+            <div class="product-card">
+                <div class="product-image coffee">
+                    <!-- Example product image for Espresso -->
+                    <img src="img/espresso.jpg"
+                        alt="Espresso" style="width:100%;height:200px;object-fit:cover;border-radius:15px 15px 0 0;">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Espresso</h3>
+                    <div class="product-price">$3.50</div>
+                    <button class="add-to-cart" data-id="1">
+                        <i class="fas fa-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Bread Example -->
+            <div class="product-card">
+                <div class="product-image bread">
+                    <!-- Example product image for Croissant -->
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80"
+                        alt="Croissant" style="width:100%;height:200px;object-fit:cover;border-radius:15px 15px 0 0;">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.4</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Croissant</h3>
+                    <div class="product-price">$3.25</div>
+                    <button class="add-to-cart" data-id="13">
+                        <i class="fas fa-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Milk Tea Example -->
+            <div class="product-card">
+                <div class="product-image milktea">
+                    <!-- Example product image for Classic Milk Tea -->
+                    <img src="https://images.unsplash.com/photo-1519864601474-6e3d7b9e1a2e?auto=format&fit=crop&w=400&q=80"
+                        alt="Classic Milk Tea" style="width:100%;height:200px;object-fit:cover;border-radius:15px 15px 0 0;">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.9</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Classic Milk Tea</h3>
+                    <div class="product-price">$4.50</div>
+                    <button class="add-to-cart" data-id="5">
+                        <i class="fas fa-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Milkshake Example -->
+            <div class="product-card">
+                <div class="product-image milkshake">
+                    <!-- Example product image for Chocolate Milkshake -->
+                    <img src="https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?auto=format&fit=crop&w=400&q=80"
+                        alt="Chocolate Milkshake" style="width:100%;height:200px;object-fit:cover;border-radius:15px 15px 0 0;">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.6</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Chocolate Milkshake</h3>
+                    <div class="product-price">$5.50</div>
+                    <button class="add-to-cart" data-id="9">
+                        <i class="fas fa-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+        <div class="cart-footer">
+            <div class="total">
+                <span>Total:</span>
+                <span class="total-price" id="totalPrice">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Place Order</button>
+        </div>
+    </div>
+
+    <!-- Order Confirmation -->
+    <div class="order-confirmation" id="orderConfirmation">
+        <i class="fas fa-check-circle"></i>
+        <h3>Order Placed Successfully!</h3>
+        <p>Thank you for your purchase. Your order is being prepared.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

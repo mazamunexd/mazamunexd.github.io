@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Weight & Height Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+        <div class="shape shape4"></div>
+    </div>
+
+    <div class="container">
+        <header class="app-header">
+            <h1><i class="fas fa-balance-scale"></i> Universal Converter</h1>
+            <p>Convert weight and height measurements with ease</p>
+        </header>
+
+        <div class="converter-tabs">
+            <button class="tab-btn active" data-tab="weight">
+                <i class="fas fa-weight"></i>
+                Weight Converter
+            </button>
+            <button class="tab-btn" data-tab="height">
+                <i class="fas fa-ruler-vertical"></i>
+                Height Converter
+            </button>
+        </div>
+
+        <!-- Weight Converter -->
+        <div class="converter-section active" id="weight-converter">
+            <div class="converter-card">
+                <h2><i class="fas fa-weight-hanging"></i> Weight Converter</h2>
+                
+                <div class="input-section">
+                    <div class="input-group">
+                        <label for="weight-input">Enter Weight:</label>
+                        <div class="input-container">
+                            <input type="number" id="weight-input" placeholder="0" step="0.01">
+                            <select id="weight-from-unit">
+                                <option value="kg">Kilograms (kg)</option>
+                                <option value="lbs">Pounds (lbs)</option>
+                                <option value="g">Grams (g)</option>
+                                <option value="oz">Ounces (oz)</option>
+                                <option value="stone">Stone</option>
+                                <option value="ton">Tons</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conversion-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+
+                <div class="results-section">
+                    <h3>Converted Results:</h3>
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <i class="fas fa-weight"></i>
+                            <span class="result-label">Kilograms</span>
+                            <span class="result-value" id="kg-result">0</span>
+                        </div>
+                        <div class="result-card">
+                            <i class="fas fa-dumbbell"></i>
+                            <span class="result-label">Pounds</span>
+                            <span class="result-value" id="lbs-result">0</span>
+                        </div>
+                        <div class="result-card">
+                            <i class="fas fa-feather"></i>
+                            <span class="result-label">Grams</span>
+                            <span class="result-value" id="g-result">0</span>
+                        </div>
+                        <div class="result-card">
+                            <i class="fas fa-cube"></i>
+                            <span class="result-label">Ounces</span>
+                            <span class="result-value" id="oz-result">0</span>
+                        </div>
+                        <div class="result-card">
+                            <i class="fas fa-gem"></i>
+                            <span class="result-label">Stone</span>
+                            <span class="result-value" id="stone-result">0</span>
+                        </div>
+                        <div class="result-card">
+                            <i class="fas fa-truck"></i>
+                            <span class="result-label">Tons</span>
+                            <span class="result-value" id="ton-result">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Height Converter -->
+        <div class="converter-section" id="height-converter">
+            <div class="converter-card">
+                <h2><i class="fas fa-ruler-combined"></i> Height Converter</h2>
+                
+                <div class="input-section">
+                    <div class="input-group">
+                        <label for="height-input">Enter Height:</label>
+                        <div class="input-container">
+                            <input type="number" id="height-input" placeholder="0" step="0.01">
+                            <select id="height-from-unit">
+                                <option value="cm">Centimeters (cm)</option>
+                                <option value="m">Meters (m)</option>
+                                <option value="in">Inches (in)</option>
+                                <option value="ft">Feet (ft)</option>
+                                <option value="mm">Millimeters (mm)</option>
+                                <option value="yd">Yards (yd)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conversion-arrow">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+
+                <div class="results-section">
+                    <h3>Converted Results:</h3>
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <i class="fas fa-ruler"></i>
+                            <span class="result-label">Centimeters</span>
+                            <span class="result-value" id="cm-result">0</span>
+                        </div>
+                        <div class="result-card">
+                            <i class="fas fa-arrows-alt-v"></i>
+                            <span class="result-label">Meters</span>
+                            <span class="result-value" id="m-result">0</span>
+                        </div>
+                        <div class="result-card">
+                            <i class="fas fa-ruler-horizontal"></i>
+                            <span class="result-label">Inches</span>
+                            <span class="result-value" id="in-result">0</span>
+                        </div>
+                        <div class="result-card">
+                            <i class="fas fa-shoe-prints"></i>
+                            <span class="result-label">Feet</span>
+                            <span class="result-value" id="ft-result">0</span>
+                        </div>
+                        <div class="result-card">
+                            <i class="fas fa-microscope"></i>
+                            <span class="result-label">Millimeters</span>
+                            <span class="result-value" id="mm-result">0</span>
+                        </div>
+                        <div class="result-card">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                            <span class="result-label">Yards</span>
+                            <span class="result-value" id="yd-result">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feet and Inches Display -->
+                <div class="special-conversion">
+                    <div class="feet-inches-display">
+                        <i class="fas fa-male"></i>
+                        <span>Height in Feet & Inches:</span>
+                        <span class="feet-inches-result" id="feet-inches-result">0' 0"</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="error-message" id="error-message">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span id="error-text">Please enter a valid positive number!</span>
+        </div>
+
+        <div class="clear-btn-container">
+            <button class="clear-btn" id="clear-btn">
+                <i class="fas fa-refresh"></i>
+                Clear All
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
